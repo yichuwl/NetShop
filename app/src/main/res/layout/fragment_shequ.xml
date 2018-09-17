@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_title_shequ"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:gravity="center"
+        android:text="@string/txt_title_shequ"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/margin_twenty" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/txt_title_shequ"
+        android:background="@color/main_color" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_shequlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txt_title_shequ"
+        android:layout_marginTop="2dp">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recy_shequ"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@color/main_color_transparent"
+            android:dividerHeight="10dp"
+            android:paddingLeft="@dimen/margin_five"
+            android:paddingRight="@dimen/margin_five" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

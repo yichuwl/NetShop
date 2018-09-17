@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".goods.AddrListActivity">
+
+    <include layout="@layout/top_bar" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@color/gray_transparent" />
+
+    <TextView
+        android:id="@+id/add"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:drawablePadding="@dimen/margin_five"
+        android:drawableRight="@mipmap/arrow_right_normal"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/margin_fifteen"
+        android:paddingRight="@dimen/margin_ten"
+        android:text="@string/add_addr"
+        android:drawableLeft="@mipmap/add_icon"
+        android:textSize="@dimen/activity_horizontal_margin"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/gray_transparent" />
+
+    <ListView
+        android:id="@+id/list_addrlist"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+</LinearLayout>

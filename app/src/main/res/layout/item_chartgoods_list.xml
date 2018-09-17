@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    android:padding="@dimen/margin_five">
+
+    <CheckBox
+        android:id="@+id/checkbox_good_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:text="" />
+
+    <ImageView
+        android:id="@+id/image_item_good_chart"
+        android:layout_width="80dp"
+        android:layout_height="90dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_five"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher" />
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_title_item_goods"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="sdfsdfsd"
+            android:textSize="@dimen/activity_horizontal_margin" />
+
+        <TextView
+            android:id="@+id/txt_model_item_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/txt_title_item_goods"
+            android:layout_below="@+id/txt_title_item_goods"
+            android:layout_marginTop="@dimen/margin_five"
+            android:layout_toLeftOf="@+id/linea_mp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="sdfasdfsadfsa"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/tabtxt_size_twenlve" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:layout_marginLeft="@dimen/margin_ten">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥ "
+                android:textColor="@color/main_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/text_chartgoods_money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="234"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/activity_horizontal_margin" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linea_mp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/txt_title_item_goods"
+            android:layout_marginRight="@dimen/margin_five"
+            android:layout_marginTop="@dimen/margin_five"
+            android:layout_toLeftOf="@+id/btn_remove_goodschart">
+
+            <TextView
+                android:id="@+id/text_minus_goodschart"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_maincolor_nocorner"
+                android:gravity="center"
+                android:text="-"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/text_num_goodschart"
+                android:layout_width="32dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_maincolor_nocorner"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/main_color" />
+
+            <TextView
+                android:id="@+id/text_plus_goodschart"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:background="@drawable/bg_maincolor_nocorner"
+                android:gravity="center"
+                android:text="+"
+                android:textColor="@color/main_color" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_remove_goodschart"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:layout_marginRight="3dp"
+            android:background="@mipmap/remove"
+            android:text=""
+            android:textColor="@color/main_color" />
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="38dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/txt_chart"
+            android:textSize="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/txt_clearall_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:text="@string/clearall"
+            android:textColor="@color/main_color"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_color"/>
+
+    <!-- <FrameLayout
+         android:layout_width="match_parent"
+         android:layout_height="0dp"
+         android:layout_weight="1">
+ -->
+    <TextView
+        android:id="@+id/txt_gotosign"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/edit_margin_lr_thirty"
+        android:gravity="center"
+        android:text="@string/gotosign"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/twentyfive"/>
+
+    <com.shop.customize.pullrefresh.PullToRefershView
+        android:id="@+id/list_goodschart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/margin_ten"
+        android:layout_weight="1"
+        android:divider="@color/gray_transparent"
+        android:dividerHeight="3dp"/>
+    <!--   </FrameLayout>-->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/main_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:gravity="center_vertical">
+
+        <CheckBox
+            android:id="@+id/rdb_selectall_chart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:text="@string/selectall"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/txt_topay_money"
+            android:text="@string/good_count"
+            android:textColor="@color/dark_red"
+            android:textSize="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/txt_topay_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="@dimen/margin_five"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/btn_chart_pay"
+            android:text="0.0"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/margin_fifteen"/>
+
+        <TextView
+            android:id="@+id/txt_privilege"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/txt_topay_money"
+            android:layout_below="@+id/txt_topay_money"
+            android:layout_marginTop="3dp"
+            android:layout_weight="1"
+            android:text="0.0"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/tabtxt_size_twenlve"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_privilege"
+            android:layout_marginTop="3dp"
+            android:layout_toLeftOf="@+id/txt_privilege"
+            android:layout_weight="1"
+            android:text="总额优惠："
+            android:textColor="@color/gray"
+            android:textSize="@dimen/tabtxt_size_twenlve"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/btn_chart_pay"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@color/main_pay_bg_red"
+            android:text="@string/topay_chart"
+            android:textColor="@color/white"
+            android:textSize="@dimen/margin_twenty"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.shop">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission
+        android:name="android.permission.USE_CREDENTIALS"
+        android:maxSdkVersion="22"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.RECORD_VIDEO"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="2.2"/>
+
+        <activity
+            android:name=".MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".sign.SigninAndUpActivity"/>
+        <activity android:name=".BaseActivity"/>
+        <activity android:name=".shequ.SheQuArticleActivity"/>
+        <activity android:name=".firstshow.CategoriesActivity"/>
+        <activity android:name=".shopchart.EnsureOrderActivity"/>
+        <activity android:name=".sign.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".shopchart.AddressActivity"/>
+        <activity android:name=".goods.GoodsListActivity"/>
+        <activity android:name=".goods.GoodsShowActivity"/>
+        <activity android:name=".goods.GoodsCommentActivity"/>
+        <activity
+            android:name=".shequ.CommentArticleActivity"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity android:name=".personspace.CouponListActivity"/>
+        <activity android:name=".personspace.ChangePersonMessageActivity"/>
+        <activity android:name=".personspace.ToBePayListActivity"/>
+        <activity android:name=".personspace.ToBeSendActivity"/>
+        <activity android:name=".personspace.ToBeReceiveActivity"/>
+        <activity android:name=".personspace.ToCommentActivity"/>
+        <activity android:name=".personspace.ChangePassWordActivity"/>
+        <activity android:name=".goods.SelectPayTypeActivity"/>
+        <activity
+            android:name=".personspace.CommentGoodsActivity"
+            android:windowSoftInputMode="adjustPan"/>
+        <activity android:name=".goods.GoodsSearchActivity"/>
+        <activity android:name=".goods.TimeToByListActivity"/>
+        <activity android:name=".wxapi.WXPayEntryActivity"/>
+
+        <!-- 支付宝 -->
+
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <activity
+            android:name="com.alipay.sdk.auth.AuthActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"/>
+        <activity android:name=".goods.AddrListActivity"/>
+        <activity android:name=".personspace.OrderDetailActivity">
+        </activity>
+    </application>
+
+</manifest>

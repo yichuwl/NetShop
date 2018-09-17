@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:id="@+id/date_select"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="@dimen/margin_twenty"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/sp_year"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            />
+
+        <Spinner
+            android:id="@+id/sp_month"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/sp_day"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="--"
+            android:textColor="@color/white"/>
+
+        <Spinner
+            android:id="@+id/sp_yearend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"/>
+
+        <Spinner
+            android:id="@+id/sp_monthend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+        <Spinner
+            android:id="@+id/sp_dayend"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_twenty"
+        android:layout_marginRight="@dimen/margin_twenty"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/sp_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_weight="1"
+            ></Spinner>
+
+        <TextView
+            android:id="@+id/tv_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_twenty"
+            android:layout_weight="1"
+            android:textColor="@color/main_color_transparent90"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/searchLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:layout_marginTop="10dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone">
+
+            <com.shop.customize.pullrefresh.ClearEditText
+                android:id="@+id/content_edt_seatch"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_toLeftOf="@+id/basedata_select_btn_serach"
+                android:background="@null"
+                android:gravity="center_vertical"
+                android:paddingLeft="10.0sp"
+                android:singleLine="true"
+                android:textColor="#99000000"
+                android:textColorHint="@color/white"
+                android:textSize="17.0dip"/>
+
+            <ImageView
+                android:id="@+id/ivDeleteText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/basedata_select_btn_serach"
+                android:layout_centerInParent="true"
+                android:paddingRight="20dp"
+                android:src="@mipmap/close"
+                android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/basedata_select_btn_serach"
+                android:layout_width="52dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="center"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/content_nofind"
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="right|top"
+        android:background="#E0E0E0"
+        android:gravity="center_vertical"
+        android:text="没有匹配"
+        android:textColor="#454545"
+        android:visibility="gone"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/content_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:weightSum="1"></ListView>
+
+        <ExpandableListView
+            android:id="@+id/exp_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:groupIndicator="@null"
+            android:visibility="gone"
+            android:weightSum="1">
+
+        </ExpandableListView>
+
+        <RelativeLayout
+            android:id="@+id/refresh_rootview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:weightSum="2">
+
+            <ImageView
+                android:id="@+id/refresh_img_cloud"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="2"
+                android:background="@null"
+                android:paddingBottom="5dip"
+                android:src="@drawable/form_query_cloud_gray"/>
+
+            <ImageView
+                android:id="@+id/refresh_img_updata"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:background="@null"
+                android:src="@mipmap/default_ptr_rotate"/>
+
+            <TextView
+                android:id="@+id/refresh_txt_up"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/refresh_img_cloud"
+                android:layout_centerHorizontal="true"
+                android:paddingBottom="5dip"
+                android:text="下拉刷新"
+                android:textColor="#D0D2D2"
+                android:textSize="11sp"/>
+
+            <TextView
+                android:id="@+id/refresh_txt_down"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/refresh_img_cloud"
+                android:layout_centerHorizontal="true"
+                android:text="暂无数据显示"
+                android:textColor="#D0D2D2"
+                android:textSize="14sp"/>
+        </RelativeLayout>
+    </FrameLayout>
+
+</LinearLayout>

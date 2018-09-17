@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="horizontal"
+    android:paddingLeft="5dp"
+    android:paddingRight="@dimen/margin_five"
+    android:paddingTop="3dp">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_coupon" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_couponprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/edit_margin_lr_thirty"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:text="5"
+                android:textColor="@color/darkyellow"
+                android:textSize="@dimen/fourty" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_couponprice"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:layout_toRightOf="@+id/txt_couponprice"
+                android:paddingBottom="@dimen/margin_five"
+                android:text="元"
+                android:textColor="@color/darkyellow"
+                android:textSize="@dimen/activity_horizontal_margin" />
+
+            <TextView
+                android:id="@+id/txt_couponusertime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/margin_five"
+                android:layout_marginRight="@dimen/margin_ten"
+                android:text="2018.09.02"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tabtxt_size_twenlve" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_couponusertime"
+                android:layout_toLeftOf="@+id/txt_couponusertime"
+                android:text="使用时间："
+                android:textColor="@color/black"
+                android:textSize="@dimen/tabtxt_size_twenlve" />
+
+            <TextView
+                android:id="@+id/txt_couponrule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/txt_couponusertime"
+                android:layout_alignRight="@+id/txt_couponusertime"
+                android:layout_marginBottom="3dp"
+                android:text="满300减50"
+                android:textColor="@color/black"
+                android:textSize="@dimen/tabtxt_size_twenlve" />
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_getcoupon_first"
+        android:layout_width="56dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="2dp"
+        android:background="@color/yellow"
+        android:text="领取"
+        android:textColor="@color/white" />
+</LinearLayout>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/margin_fifteen"
+        android:layout_marginRight="@dimen/margin_fifteen"
+        android:background="@drawable/bg_gray_corner"
+        android:padding="@dimen/margin_ten">
+
+        <TextView
+            android:id="@+id/txt_addr_name_addrlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_five"
+            android:text="sdfsfs"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_addr_phone_addrlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txt_addr_name_addrlist"
+            android:layout_marginLeft="@dimen/margin_fifteen"
+            android:layout_toRightOf="@+id/txt_addr_name_addrlist"
+            android:text="sdfsfs"
+            android:textColor="@color/gray"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/txt_addr_addrdetail_addrlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_addr_name_addrlist"
+            android:layout_marginLeft="@dimen/margin_ten"
+            android:layout_marginRight="@dimen/margin_ten"
+            android:layout_marginTop="@dimen/margin_fifteen"
+            android:layout_toLeftOf="@+id/img_change_addr"
+            android:text="sdfsfs"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/txt_isdefault"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/txt_addr_addrdetail_addrlist"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:layout_marginLeft="3dp"
+            android:background="@color/main_color_transparent"
+            android:text="@string/is_default_addr"
+            android:textColor="@color/main_color"
+            android:textSize="14dp" />
+
+        <ImageView
+            android:id="@+id/img_delete_addr"
+            android:layout_width="28dp"
+            android:layout_toLeftOf="@+id/img_choose_addr"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/margin_fifteen"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:scaleType="fitXY"
+            android:src="@mipmap/remove" />
+
+        <ImageView
+            android:id="@+id/img_choose_addr"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginRight="@dimen/margin_five"
+            android:scaleType="fitXY"
+            android:src="@mipmap/arrow_right_normal" />
+
+        <ImageView
+            android:id="@+id/img_change_addr"
+            android:layout_width="28dp"
+            android:layout_height="25dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignTop="@+id/img_delete_addr"
+            android:layout_marginRight="@dimen/margin_twenty"
+            android:layout_toLeftOf="@+id/img_delete_addr"
+            android:scaleType="fitXY"
+            android:src="@mipmap/changeuserdata_icon" />
+
+    </RelativeLayout>
+
+</LinearLayout>

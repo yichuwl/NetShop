@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="120dp"
+              android:background="@drawable/bg_gray_corner"
+              android:padding="@dimen/margin_five">
+
+    <ImageView
+        android:id="@+id/image_item_time_list"
+        android:layout_width="70dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/margin_ten"
+        android:scaleType="fitXY"
+        android:src="@mipmap/ic_launcher"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txt_title_item_time_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_five"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="sdfsdfsd"
+            android:textSize="@dimen/activity_horizontal_margin"/>
+
+        <TextView
+            android:id="@+id/txt_marketprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="3dp"
+            android:layout_marginLeft="@dimen/margin_five"
+            android:text="1232"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/margin_ten"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/txt_marketprice"
+            android:layout_marginLeft="@dimen/margin_five">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="￥ "
+                android:textColor="@color/main_color"
+                android:textSize="14dp"/>
+
+            <TextView
+                android:id="@+id/text_money_item_timelist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="234"
+                android:textColor="@color/main_color"
+                android:textSize="@dimen/activity_horizontal_margin"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_bynow_timelist"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/margin_ten"
+            android:layout_marginRight="3dp"
+            android:background="@color/main_pay_bg_red"
+            android:text="@string/by_now"
+            android:textColor="@color/white"
+            android:textSize="@dimen/activity_horizontal_margin"/>
+    </RelativeLayout>
+</LinearLayout>

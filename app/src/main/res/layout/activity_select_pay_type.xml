@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".goods.SelectPayTypeActivity">
+
+    <include layout="@layout/top_bar"/>
+
+    <RadioGroup
+        android:id="@+id/rdg_paytype"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/twentyfive"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/margin_fifteen"
+        android:paddingRight="@dimen/margin_fifteen">
+
+        <RadioButton
+            android:id="@+id/rdb_wechat_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_five"
+            android:text="@string/wechartpay"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="@dimen/margin_five"
+            android:layout_marginTop="@dimen/margin_five"
+            android:background="@color/gray_transparent"/>
+
+        <RadioButton
+            android:id="@+id/rdb_zhifubao_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_five"
+            android:text="@string/zhifubaopay"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_suretopay"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/edit_margin_lr_thirty"
+        android:background="@drawable/bg_maincolor_nocorner"
+        android:text="@string/suretopay"/>
+</LinearLayout>

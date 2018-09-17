@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/margin_fifteen">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:paddingLeft="@dimen/margin_ten">
+
+            <ImageView
+                android:id="@+id/image_thumb_goodselect"
+                android:layout_width="50dp"
+                android:layout_height="80dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/margin_five"
+                android:layout_marginTop="-20dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/txt_goodstitle_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:layout_marginRight="3dp"
+                android:layout_toLeftOf="@+id/img_closewindow"
+                android:layout_toRightOf="@+id/image_thumb_goodselect"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="dfsdsdgfgasdgsdgsdfsdsdfsdf"
+                android:textSize="@dimen/activity_horizontal_margin"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_closewindow"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="@dimen/margin_ten"
+                android:scaleType="fitXY"
+                android:src="@mipmap/close" />
+
+            <TextView
+                android:id="@+id/txt_goodsrmb_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/image_thumb_goodselect"
+                android:layout_marginLeft="@dimen/margin_fifteen"
+                android:layout_toRightOf="@+id/image_thumb_goodselect"
+                android:text="￥ "
+                android:textColor="@color/main_color"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/txt_goodsprice_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/txt_goodsrmb_window"
+                android:layout_toRightOf="@+id/txt_goodsrmb_window"
+                android:text="2525"
+                android:textColor="@color/main_color"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/txt_goodsnum_window"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt_goodstitle_window"
+                android:layout_marginLeft="@dimen/twentyfive"
+                android:layout_marginTop="@dimen/margin_five"
+                android:layout_toRightOf="@+id/txt_goodsprice_window"
+                android:text="库存"
+                android:textColor="@color/gray"
+                android:textSize="14dp" />
+
+            <LinearLayout
+                android:id="@+id/linear_model"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_thumb_goodselect"
+                android:layout_marginTop="@dimen/edit_margin_lr_thirty"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_ten"
+                    android:text="@string/model_unit"
+                    android:textSize="@dimen/activity_horizontal_margin"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/gray_transparent" />
+
+                <com.example.library.AutoFlowLayout
+                    android:id="@+id/autoflow_goodsselect"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:paddingBottom="3dp"
+                    android:paddingLeft="@dimen/margin_ten"
+                    android:paddingRight="@dimen/margin_ten"
+                    android:paddingTop="3dp"
+                    app:horizontalSpace="8dp"
+                    app:multiChecked="false" />
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginTop="3dp"
+                android:background="@color/gray_transparent" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/linear_model"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_ten"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_minus_goodssel"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_maincolor_nocorner"
+                    android:gravity="center"
+                    android:text="-" />
+
+                <TextView
+                    android:id="@+id/txt_num_goodssel"
+                    android:layout_width="35dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_maincolor_nocorner"
+                    android:gravity="center"
+                    android:text="1" />
+
+                <TextView
+                    android:id="@+id/txt_plus_goodssel"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_maincolor_nocorner"
+                    android:gravity="center"
+                    android:text="+" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/margin_twenty"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/margin_twenty"
+            android:paddingRight="@dimen/margin_twenty">
+
+            <Button
+                android:id="@+id/btn_goodsselect_sure"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/margin_fifteen"
+                android:layout_marginLeft="@dimen/margin_twenty"
+                android:layout_marginRight="@dimen/margin_twenty"
+                android:layout_marginTop="@dimen/margin_fifteen"
+                android:layout_weight="1"
+                android:background="@drawable/bg_btn_pay_tochart"
+                android:gravity="center"
+                android:text="@string/sure"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
